@@ -1,0 +1,22 @@
+import sys
+import math
+
+
+n = int(input())
+maxh = 0
+mint = math.inf
+oh = ot = ''
+for i in range(n):
+    ob, u = input().split()
+    u = float(u)
+    h = u ** 2 / (2 * 9.8)
+    t=2 * u / (9.8)
+    if h > maxh:
+        oh = ob
+        maxh = h
+    if t < mint:
+        ot = ob
+        mint = t
+
+print(ot, round(mint,2))
+print(oh, round(maxh,2))
