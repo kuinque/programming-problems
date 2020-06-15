@@ -1,0 +1,7 @@
+s=input()
+t=s[0]
+c=0
+for i in s:
+ if i==t:c+=1
+ else:print(str(c)+t,end='');c=1;t=i
+print(str(c)+t)
